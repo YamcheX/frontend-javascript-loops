@@ -12,6 +12,12 @@
 // ==========================================
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
+for (let i = 0; i < 5; i++) {
+    console.log('vergadering om ' + meetingTimes[i]);
+}
+
+// het kan ook met template literals:
+// console.log(`Vergadering om ${meetingTimes[i]}`);
 
 
 // ==========================================
@@ -26,6 +32,21 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // ==========================================
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
+for (let i = 0; i < salaries.length; i++) {
+    console.log(1.05 * salaries[i]);
+}
+
+// uitwerking antwoord
+// const salaries = [3200, 2350, 2800, 3500, 2800];
+//
+// for (let i = 0; i < salaries.length; i++) {
+//     salaries[i] = salaries[i] * 1.05;
+//     // het kan ook zo:
+//     // salaries[i] *= 1.05;
+// }
+//
+// console.log(salaries);
+
 
 
 // ==========================================
@@ -38,6 +59,18 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // ==========================================
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+for (let i = 0; i < birthYears.length; i++) {
+    console.log(2025 - birthYears[i]);
+}
+
+// Uitwerking antwoord
+// const birthYears = [1995, 1997, 1990, 2003, 1982];
+//
+// for (let i = 0; i < birthYears.length; i++) {
+//     birthYears[i] = 2025 - birthYears[i];
+// }
+//
+// console.log(birthYears);
 
 
 // ==========================================
@@ -50,7 +83,24 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // console.log(leaveHours) geeft [12, 4.5, 4, 3.5, 1.5]
 // ==========================================
 
-const leaveHours = [6, 9, 2, 7, 3];
+const leaveHours = [6, 9, 2, 3, 7, 3];
+// for (let i = 0; i < leaveHours.length; i++) {
+//     if(i % 2 === 0){
+//         console.log(leaveHours[i] * 2);
+//     } else {
+//         console.log(leaveHours[i] * 0.5);
+//     }
+//
+// }
+
+for (let i = 0; i < leaveHours.length; i++) {
+    if(i % 2 ===0) {
+        leaveHours[i] = leaveHours[i] * 2;
+    } else {
+        leaveHours[i] = leaveHours[i] * 0.5;
+    }
+}
+console.log(leaveHours);
 
 
 // ==========================================
@@ -68,5 +118,7 @@ const leaveHours = [6, 9, 2, 7, 3];
 // ==========================================
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
-
-
+for (let i = 0; i < productionCodes.length; i++) {
+    productionCodes[i] = productionCodes[i].toUpperCase().trim();
+}
+console.log(productionCodes);
